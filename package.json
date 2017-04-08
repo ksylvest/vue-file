@@ -1,0 +1,9 @@
+{
+  "name": "vue-file",
+  "version": "0.0.1",
+  "description": "single and multi files",
+  "main": "index.js",
+  "repository": "https://github.com/ksylvest/vue-file",
+  "author": "Kevin Sylvestre",
+  "license": "MIT"
+}
