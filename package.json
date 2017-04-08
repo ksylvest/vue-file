@@ -1,7 +1,7 @@
 {
   "name": "vue-file",
   "version": "0.0.1",
-  "description": "single and multi files",
+  "description": "single and multiple files for VueJS",
   "main": "index.js",
   "repository": "https://github.com/ksylvest/vue-file",
   "author": "Kevin Sylvestre",

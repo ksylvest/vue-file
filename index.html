@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./vue-file.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <form>
+        <input type="file" v-file multiple>
+      </form>
+    </div>
+    <script>
+      var app = new Vue({ el: "#app" });
+    </script>
+  </body>
+</html>
