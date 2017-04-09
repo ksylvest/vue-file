@@ -6,12 +6,30 @@
   </head>
   <body>
     <div id="app">
+      <table>
+        <tr v-for="selection in selections">
+          <td>
+            <img v-bind:src="selection.data">
+          </td>
+          <td>{{ selection.file.name }}</td>
+        </tr>
+      </table>
       <form>
-        <input type="file" v-file multiple>
+        <input type="file" v-file:selected="selected" multiple>
       </form>
     </div>
     <script>
-      var app = new Vue({ el: "#app" });
+      var app = new Vue({
+        el: "#app",
+        data: {
+          selections: [],
+        },
+        methods: {
+          selected: function (file, data) {
+            this.selections.push({ file: file, data: data });
+          },
+        },
+      });
     </script>
   </body>
 </html>
