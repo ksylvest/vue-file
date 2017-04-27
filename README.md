@@ -9,7 +9,39 @@ TODO
 Integrating Vue File as a directive is simple:
 
 ```html
-<input v-file:selected="selected" type="file" multiple accept="image/gif, image/jpg, image/jpeg, image/png">
+<div id="app">
+  <form>
+    <input v-file:selected="selected" type="file" multiple accept="image/gif, image/jpg, image/jpeg, image/png">
+    <button
+  </form>
+</div>
+```
+
+```javascript
+const request = require('request');
+
+var app = new Vue({
+  el: "#app",
+  data: {
+    selections: [],
+  },
+  methods: {
+    selected: function (file, data) {
+      this.selections.push({ file: file, data: data });
+    },
+    save: function () {
+
+    },
+  },
+});
+
+
+request('http://www.google.com', function (error, response, body) {
+  console.log('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
+});
+
 ```
 
 ### Integration with Amazon Simple Storage Solution
@@ -29,7 +61,6 @@ storage = Fog::Storage.new(
 
 url = storage.put_object_url(bucket = "...", path = "#{SecureRandom.uuid}.txt", expires = 2.hours)
 ```
-
 
 
 

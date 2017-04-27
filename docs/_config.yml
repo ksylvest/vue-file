@@ -1,0 +1,12 @@
+title: Vue File
+description: Vue File is designed to make selecting files a breeze! Vue File supports single and multi selection, drag and drop, and instructions for Amazon Simple Storage Solution or Google Cloud Storage.
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+github: https://github.com/ksylvest/vue-file
+fontawesome: https://use.fontawesome.com/95d15bb026.js

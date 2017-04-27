@@ -1,0 +1,68 @@
+---
+layout: default
+---
+
+{% capture example %}
+<form>
+  <div class="media" v-for="selection in selections">
+    <figure class="media-left">
+      <div class="image is-96x96">
+        <img v-bind:src="selection.data" class="thumbnail">
+      </div>
+    </figure>
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        {{ selection.file.name }}
+        {{ selection.file.size | file-size }}
+      </div>
+      <div class="content">
+        <progress class="progress" value="30" max="100">30%</progress>
+      </div>
+    </div>
+    <div class="media-right">
+      <button class="delete"></button>
+    </div>
+  </div>
+  <div class="field">
+    <label>
+      <input style="display:none" class="filer" v-file-picker:selected="selected" type="file" multiple accept="image/*">
+      <span class="button">Browse</span>
+    </label>
+  </div>
+  <div class="field is-grouped">
+    <p class="control">
+      <button class="button is-primary">Submit</button>
+    </p>
+    <p class="control">
+      <button class="button is-link">Cancel</button>
+    </p>
+  </div>
+</form>
+{% endcapture %}
+
+<section id="hero" class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Single and Multi File Select for Vue.js
+      </h1>
+      <h2 class="subtitle">
+        <strong>Vue File</strong> is designed to make selecting files a breeze! <Strong>Vue File</strong> supports single and multi selection, drag and drop, and instructions for Amazon Simple Storage Solution or Google Cloud Storage.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section id="try" class="section">
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">Try</h1>
+    </div>
+    {{ example }}
+    {% highlight html %}
+    {{ example }}
+    {% endhighlight %}
+  </div>
+
+</section>

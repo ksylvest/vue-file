@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma/css/bulma.css">
+    <script src="{{site.fontawesome}}"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="../vue-file.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="./app.css">
+    <script src="./app.js"></script>
+  </body>
+</html>
