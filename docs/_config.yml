@@ -10,3 +10,10 @@ exclude:
 
 github: https://github.com/ksylvest/vue-file
 fontawesome: https://use.fontawesome.com/95d15bb026.js
+
+authors:
+  -
+    name: Kevin Sylvestre
+    blog: https://ksylvest.com
+    github: https://github.com/ksylvest
+    twitter: https://twitter.com/ksylvest

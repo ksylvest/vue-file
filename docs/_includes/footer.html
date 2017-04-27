@@ -2,14 +2,16 @@
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        <strong>Vue File</strong> by <a href="https://ksylvest.com">Kevin Sylvestre</a>.
-        The source code is licensed <a href="LICENSE">MIT</a>. The website content
+        <strong>Vue File</strong> by
+
+        {% for author in site.authors %}
+          <a href="{{ author.blog }}">{{ author.name }}</a>
+          <a href="{{ author.github }}" class="icon"><i class="fa fa-github"></i></a>
+          <a href="{{ author.twitter }}" class="icon"><i class="fa fa-twitter"></i></a>
+        {% endfor %}
       </p>
-      <p>
-        <a href="{{ site.github }}" class="icon">
-          <i class="fa fa-github"></i>
-        </a>
-      </p>
+
+      <p>The source code is licensed <a href="LICENSE">MIT</a>.</p>
     </div>
   </div>
 </footer>
