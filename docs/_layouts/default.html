@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>{{ site.title }}</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/bulma/css/bulma.css">
-    <script src="{{site.fontawesome}}"></script>
-    <script src="https://unpkg.com/axios/dist/axios.js"></script>
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <script src="../vue-file.js"></script>
   </head>
   <body>
     <div id="app">
@@ -13,8 +13,7 @@
       {{ content }}
       {% include footer.html %}
     </div>
-
-    <link rel="stylesheet" type="text/css" href="./app.css">
-    <script src="./app.js"></script>
+    <script src="{{site.fontawesome}}"></script>
+    <script src="./dist/bundle.js"></script>
   </body>
 </html>

@@ -1,3 +1,10 @@
+import axios from "axios";
+
+import Vue from "vue";
+import VueFile from "vue-file";
+
+Vue.use(VueFile);
+
 (function () {
   var app = new Vue({
     el: "#app",
