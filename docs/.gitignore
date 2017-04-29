@@ -2,3 +2,5 @@ _site
 .sass*
 .jekyll*
 node*
+log/*
+tmp/*

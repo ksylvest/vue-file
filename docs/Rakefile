@@ -2,9 +2,9 @@ namespace :favicon do
   desc "generate a favicon"
   task :generate do
     system <<~SYSTEM
-    sketchtool export artboards favicon.sketch > /dev/null
-    convert favicon-*.png favicon.ico
-    rm favicon-*.png
+    sketchtool export artboards favicon.sketch --output=./tmp
+    convert tmp/favicon-*.png favicon.ico
+    rm tmp/favicon-*.png
     SYSTEM
   end
 end
